@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div>Ini website Kelas</div>
+     <h1 className=" text-3xl font-bold underline">HITAMMM</h1>
     </>
   )
 }
