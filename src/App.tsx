@@ -1,13 +1,16 @@
-import bgKelas from "./assets/icons/images/bg-kelas.png";
+import bgKelas from "./assets/icons/images/jelek.jpeg";
+import Navbar from "./components/navbar";
 
 
 function App() {
   return (
     <>
-     <section className="relative w-full h-screen overflow-hidden">
-        <img src={bgKelas} alt="Backgroud Kelas" className="absolute inset-0 w-full h-265 object-cover object-center"/>
 
-        <div className="absolut inset-0 bg-black/50"></div>
+    <Navbar />
+     <section className="relative w-full h-screen overflow-hidden">
+        <img src={bgKelas} alt="Backgroud Kelas" className="absolute inset-0 w-full h-245 object-cover object-center brightness-75"/>
+
+        <div className="absolute inset-0 bg-black/50"></div>
 
       <div className="relative z-10 flex items-end h-full px-10 pb-20">
         <div className="max-w-xl text-white">
@@ -19,5 +22,4 @@ function App() {
     </>
   )
 }
-
 export default App
