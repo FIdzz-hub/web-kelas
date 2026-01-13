@@ -1,5 +1,6 @@
 import bgKelas from "./assets/icons/images/jelek.jpeg";
 import Navbar from "./components/navbar";
+import About from "./pages/about/about";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         </div>
       </div>
      </section>
+     <About />
     </>
   )
 }
