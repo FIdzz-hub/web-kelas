@@ -3,7 +3,7 @@ import bgKelas from "../../assets/images/jelek2x.jpeg";
 function Home() {
     return (
         <>
-            <section className="relative w-full h-screen overflow-hidden">
+            <section id="home" className="relative w-full h-screen overflow-hidden">
                 <img src={bgKelas} alt="Backgroud Kelas" className="absolute inset-0 w-full h-245 object-cover object-center brightness-75" />
 
                 <div className="absolute inset-0 bg-black/50"></div>
