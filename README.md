@@ -25,13 +25,10 @@ Website ini dikembangkan menggunakan **React + TypeScript + Vite** dengan **Tail
 
 ## 📂 Struktur Folder (Ringkas)
 src/
-├── assets/
-│ └── images/
-├── components/
-│ └── Navbar.tsx
-├── pages/
-│ └── about/
-│ └── About.tsx
+├── assets/ # Gambar & aset statis
+├── components/ # Komponen reusable (Navbar, dll)
+├── pages/ # Halaman (Home, About, Gallery, News)
+├── styles/ # Global CSS & Tailwind config
 ├── App.tsx
 └── main.tsx
 
@@ -86,13 +83,11 @@ This website is built using **React + TypeScript + Vite**, with **Tailwind CSS**
 
 ## 📂 Project Structure (Simplified)
 src/
-├── assets/
-│ └── images/
-├── components/
-│ └── Navbar.tsx
-├── pages/
-│ └── about/
-│ └── About.tsx
+src/
+├── assets/ # Gambar & aset statis
+├── components/ # Komponen reusable (Navbar, dll)
+├── pages/ # Halaman (Home, About, Gallery, News)
+├── styles/ # Global CSS & Tailwind config
 ├── App.tsx
 └── main.tsx
 
