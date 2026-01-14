@@ -1,10 +1,10 @@
-import bgKelas from "../../assets/images/jelek2x.jpeg";
+import bgKelas from "../../assets/images/jelek.jpeg";
 
 function Home() {
     return (
         <>
             <section id="home" className="relative w-full h-screen overflow-hidden">
-                <img src={bgKelas} alt="Backgroud Kelas" className="absolute inset-0 w-full h-245 object-cover object-center brightness-75" />
+                <img src={bgKelas} alt="Backgroud Kelas" className="absolute inset-0 w-full h-225 object-cover object-center brightness-75" />
 
                 <div className="absolute inset-0 bg-black/50"></div>
 

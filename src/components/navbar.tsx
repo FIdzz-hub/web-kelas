@@ -28,28 +28,28 @@ function Navbar() {
               <a href="#home" className="cursor-pointer hover:text-gray-300 transition">
                 Home
               </a>
-              <span className="absolute left-0 -bottom-1 h-2px bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
             </li>
 
             <li className="relative group">
               <a href="#about" className="cursor-pointer hover:text-gray-300 transition">
                 About Us
               </a>
-              <span className="absolute left-0 -bottom-1 h-2px bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
             </li>
 
             <li className="relative group">
               <a href="#gallery" className="cursor-pointer hover:text-gray-300 transition">
                 Gallery
               </a>
-              <span className="absolute left-0 -bottom-1 h-2px bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
             </li>
 
             <li className="relative group">
               <a href="#news" className="cursor-pointer hover:text-gray-300 transition">
                 News
               </a>
-              <span className="absolute left-0 -bottom-1 h-2px bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
+              <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
             </li>
           </ul>
         </div>
