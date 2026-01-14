@@ -23,15 +23,24 @@ function About() {
         ref={sectionRef}
         id="about"
         className="min-h-screen 
-        bg-[#1f1f3a]/60
         flex flex-col items-center justify-center px-10"
       >
         {/* TITLE */}
         <div
-          className={`mb-10 transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+          className={`relative mb-16 mt-18 transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
             }`}
         >
-          <h2 className="text-3xl font-bold text-center drop-shadow-[0_0_10px_rgba(255,0,0,0.8)]">
+
+          <div className="absolute inset-0 flex justify-center items-center gap-3 -z-10">
+            {[...Array(4)].map((_, i) => (
+              <span
+                key={i}
+                className="w-3 h-16 border border-red-500 opacity-90 rotate-12"
+              />
+            ))}
+          </div>
+
+          <h2 className="text-3xl font-extrabold text-center tracking-wide">
             ABOUT US
           </h2>
         </div>
