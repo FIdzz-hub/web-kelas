@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import dummyImg from "../../assets/images/dummy.png";
+import { leaders, stats } from "../../data/aboutData";
+
 
 
 function About() {
@@ -16,27 +17,14 @@ function About() {
     return () => observer.disconnect();
   }, []);
 
-  const leaders = [
-    {
-      role: "CAPTAIN",
-      img: dummyImg,
-    },
-    {
-      role: "WAKIL CAPTAIN",
-      img: dummyImg,
-    },
-    {
-      role: "KETUA KELAS",
-      img: dummyImg,
-    },
-  ];
-
   return (
     <>
       <section
         ref={sectionRef}
         id="about"
-        className="min-h-screen bg-[#1f1f3a] text-white flex flex-col items-center justify-center px-10"
+        className="min-h-screen 
+        bg-[#1f1f3a]/60
+        flex flex-col items-center justify-center px-10"
       >
         {/* TITLE */}
         <div
@@ -59,19 +47,11 @@ function About() {
 
         {/* STATS */}
         <div className="flex justify-center gap-32 mb-20">
-          {[
-            { number: "45", label: "MURID" },
-            { number: "30", label: "LAKI-LAKI" },
-            { number: "15", label: "PEREMPUAN" },
-          ].map((item, i) => (
+          {stats.map((item, i) => (
             <div
               key={i}
               className="text-center italic transition-all duration-700"
-              style={{
-                transitionDelay: `${i * 200}ms`,
-                opacity: show ? 1 : 0,
-                transform: show ? "translateY(0)" : "translateY(20px)",
-              }}
+              style={{ transitionDelay: `${i * 200}ms` }}
             >
               <div className="text-4xl font-bold">{item.number}</div>
               <div className="text-sm tracking-widest opacity-80">

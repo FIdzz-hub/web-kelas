@@ -1,9 +1,28 @@
+import { useState, useEffect } from "react";
+
 function Navbar() {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setActive(true);
+      } else {
+        setActive(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, []);
+
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50">
         <div className="flex items-center justify-between px-10 py-5 bg-transparent">
-          <ul className="flex p-6 gap-12 text-2xl text-white font-semibold">
+          <ul className={`flex p-6 gap-12 text-2xl text-white font-semibold ${ active ? "top-0 opacity-100" : "-top-10 opacity-100" }`} >
 
             <li className="relative group">
               <a href="#home" className="cursor-pointer hover:text-gray-300 transition">
