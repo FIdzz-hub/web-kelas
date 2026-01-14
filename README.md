@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+# Web-kelas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website **web-kelas** adalah website profil kelas yang dibuat untuk menampilkan informasi, identitas, dan dokumentasi kelas secara interaktif dan modern.
 
-Currently, two official plugins are available:
+Website ini dikembangkan menggunakan **React + TypeScript + Vite** dengan **Tailwind CSS** sebagai framework styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Tujuan
+- Menjadi media informasi dan dokumentasi kelas
+- Menampilkan profil kelas secara profesional
+- Melatih penerapan frontend modern (React, TypeScript, Tailwind)
+- Mendukung navigasi halaman dengan smooth scroll
 
-## React Compiler
+## ✨ Fitur
+- Navbar dengan navigasi scroll ke setiap section
+- Hero section dengan background image dan overlay
+- About Us section dengan animasi scroll (Intersection Observer)
+- Layout responsive (desktop & mobile)
+- Animasi hover dan transisi menggunakan Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧱 Teknologi yang Digunakan
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## 📂 Struktur Folder (Ringkas)
+src/
+├── assets/
+│ └── images/
+├── components/
+│ └── Navbar.tsx
+├── pages/
+│ └── about/
+│ └── About.tsx
+├── App.tsx
+└── main.tsx
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ▶️ Cara Menjalankan Project
+1. Install dependencies
+   ```bash
+   npm install
+   
+2. Jalankan server development
+   ```bash
+   npm run dev
+   
+4. Buka di browser
+   ```bash
+   http://localhost:5173
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📦 Build untuk Produksi
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+👥 Tim Pengembang
+Website ini dikembangkan oleh mahasiswa Sistem Informasi 49–10.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+===================================================================================================================================================
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🇬🇧 README (English Version)
+# web-kelas
+
+The **web-kelas** is a class profile website designed to present class information, identity, and documentation in a modern and interactive way.
+
+This website is built using **React + TypeScript + Vite**, with **Tailwind CSS** for styling.
+
+## 🎯 Purpose
+- Serve as an information and documentation platform for the class
+- Present the class profile professionally
+- Practice modern frontend development (React, TypeScript, Tailwind)
+- Provide smooth navigation between sections
+
+## ✨ Features
+- Navbar with smooth scroll navigation
+- Hero section with background image and overlay
+- About Us section with scroll-based animations (Intersection Observer)
+- Fully responsive layout (desktop & mobile)
+- Hover effects and transitions using Tailwind CSS
+
+## 🧱 Tech Stack
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+## 📂 Project Structure (Simplified)
+src/
+├── assets/
+│ └── images/
+├── components/
+│ └── Navbar.tsx
+├── pages/
+│ └── about/
+│ └── About.tsx
+├── App.tsx
+└── main.tsx
+
+## ▶️ Getting Started
+1. Install dependencies
+   ```bash
+   npm install
+
+2. Run development server
+    ```bash
+    npm run dev
+3. pen in browser
+    ```bash
+    http://localhost:5173
+    
+📦 Build for Production
+
+    npm run build
+    
+👥 Development Team
+This website is developed by Sistem Informasi 49–10 students.
+
