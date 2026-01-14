@@ -16,6 +16,14 @@ body {
   overflow-x: hidden;
 }
 
+.bg-gallery {
+  background: linear-gradient(
+    to bottom,
+    #252237,
+    #1e1e2e
+  );
+}
+
 /* .bg-global {
   background-image:
     linear-gradient(to bottom,

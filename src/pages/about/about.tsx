@@ -25,7 +25,6 @@ function About() {
         className="min-h-screen 
         flex flex-col items-center justify-center px-10"
       >
-        {/* TITLE */}
         <div
           className={`relative mb-16 mt-18 transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
             }`}
@@ -45,7 +44,6 @@ function About() {
           </h2>
         </div>
 
-        {/* DESCRIPTION */}
         <p
           className={`max-w-2xl text-center mb-14 transition-all duration-700 delay-200 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
@@ -54,7 +52,6 @@ function About() {
           tempor incididunt ut labore et dolore magna aliqua.
         </p>
 
-        {/* STATS */}
         <div className="flex justify-center gap-32 mb-20">
           {stats.map((item, i) => (
             <div
@@ -70,7 +67,6 @@ function About() {
           ))}
         </div>
 
-        {/* ROLES */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {leaders.map((item, i) => (
             <div
