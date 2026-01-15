@@ -56,8 +56,7 @@ function About() {
           {stats.map((item, i) => (
             <div
               key={i}
-              className="text-center italic transition-all duration-700"
-              style={{ transitionDelay: `${i * 200}ms` }}
+              className={`text-center italic transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"} ${i === 0 ? "delay-0" : ""} ${i === 1 ? "delay-200" : ""} ${i === 2 ? "delay-400" : ""}`}
             >
               <div className="text-4xl font-bold">{item.number}</div>
               <div className="text-sm tracking-widest opacity-80">
@@ -71,8 +70,7 @@ function About() {
           {leaders.map((item, i) => (
             <div
               key={i}
-              className={`flex flex-col items-center transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-              style={{ transitionDelay: `${i * 200}ms` }}
+              className={`flex flex-col items-center transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} ${i === 0 ? "delay-0" : ""} ${i === 1 ? "delay-200" : ""} ${i === 2 ? "delay-400" : ""}`}
             >
               <div className="w-64 h-64 overflow-hidden rounded-2xl shadow-lg">
                 <img

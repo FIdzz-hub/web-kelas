@@ -17,12 +17,26 @@ body {
 }
 
 .bg-gallery {
-  background: linear-gradient(
-    to bottom,
-    #252237,
-    #1e1e2e
-  );
+  background: linear-gradient(to bottom,
+      #252237,
+      #1e1e2e);
 }
+
+.delay-0 {
+  transition-delay: 0ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-400 {
+  transition-delay: 400ms;
+}
+
+.delay-600 {
+  transition-delay: 600ms;
+};
 
 /* .bg-global {
   background-image:
