@@ -1,4 +1,6 @@
 import bgKelas from "../../assets/images/jelek.jpeg";
+import fotoKanan1 from "../../assets/images/4910.png";
+import fotoKanan2 from "../../assets/images/telkom.png";
 
 function Home() {
     return (
@@ -8,6 +10,16 @@ function Home() {
 
                 <div className="absolute inset-0 bg-black/50"></div>
 
+                <div className="absolute top-6 right-10 z-20 flex gap-5">
+                    <img
+                        src={fotoKanan1}
+                        className="w-16 h-16 object-cover rounded-lg"
+                    />
+                <img
+                        src={fotoKanan2}
+                        className="w-16 h-16 object-cover rounded-lg"
+                    />
+                </div>
                 <div className="relative z-10 flex items-end h-full px-10 pb-20">
                     <div className="max-w-xl text-white">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">SISTEM INFORMASI 49 - 10</h1>
