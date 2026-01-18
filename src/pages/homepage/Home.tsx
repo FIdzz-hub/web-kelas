@@ -13,10 +13,12 @@ function Home() {
                 <div className="absolute top-6 right-10 z-20 flex gap-5">
                     <img
                         src={fotoKanan1}
+                        alt="image kelas"
                         className="w-16 h-16 object-cover rounded-lg"
                     />
                 <img
                         src={fotoKanan2}
+                        alt="image kelas"
                         className="w-16 h-16 object-cover rounded-lg"
                     />
                 </div>

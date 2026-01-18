@@ -6,14 +6,14 @@ type PointerEvent =
   | React.TouchEvent<HTMLDivElement>;
 
 function Gallery() {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const startX = useRef(0);
   const total = slides.length;
 
-  const getPrev = () => (active - 1 + total) % total;
-  const getNext = () => (active + 1) % total;
+  const prev = () => setActive((p) => (p - 1 + total) % total);
+  const next = () => setActive((p) => (p + 1) % total);
 
-   const handleStart = (e: PointerEvent) => {
+  const handleStart = (e: PointerEvent) => {
     startX.current =
       "touches" in e ? e.touches[0].clientX : e.clientX;
   };
@@ -24,8 +24,10 @@ function Gallery() {
         ? e.changedTouches[0].clientX
         : e.clientX;
 
-    if (startX.current - endX > 50) setActive(getNext());
-    if (endX - startX.current > 50) setActive(getPrev());
+    const distance = startX.current - endX;
+
+    if (distance > 60) next();
+    if (distance < -60) prev();
   };
 
   return (
@@ -33,55 +35,77 @@ function Gallery() {
       id="gallery"
       className="min-h-screen flex flex-col items-center justify-center"
     >
-      <p className="text-sm tracking-widest text-blue-900 uppercase opacity-60">
+      <p className="text-sm tracking-widest opacity-60 uppercase">
         sistem informasi 49 - 10
       </p>
-      <h2 className="text-4xl font-bold text-blue-900 mb-12">Gallery</h2>
+      <h2 className="text-4xl font-bold mb-12">Gallery</h2>
 
+      {/*GALLERY */}
       <div
-        className="flex items-center gap-12 select-none"
+        className="
+          relative w-full max-w-6xl h-80
+          flex items-center justify-center
+          overflow-hidden select-none
+          cursor-grab active:cursor-grabbing
+        "
         onMouseDown={handleStart}
         onMouseUp={handleEnd}
         onTouchStart={handleStart}
         onTouchEnd={handleEnd}
       >
-        {[getPrev(), active, getNext()].map((index, pos) => (
-          <div
-            key={index}
-            className={`
-              rounded-xl overflow-hidden transition-all duration-500
-              ${pos === 1
-                ? "w-175 h-95 opacity-100"
-                : "w-64 h-80 opacity-40"
-              }`}
-          >
-            <img
-              src={slides[index].img}
-              alt="gallery"
-              className="w-full h-full object-cover"
-              draggable={false}
-            />
-          </div>
-        ))}
-      </div>
+        {slides.map((slide, i) => {
+          const offset = i - active;
 
-      <div className="flex gap-3 mt-8">
+          return (
+            <div
+              key={i}
+              className={`
+                absolute transition-transform duration-500 ease-out
+                ${offset === 0
+                  ? "translate-x-0 scale-100 z-10"
+                  : offset < 0
+                    ? "-translate-x-115 scale-90 z-0"
+                    : "translate-x-115 scale-90 z-0"
+                }
+              `}
+            >
+              <img
+                src={slide.img}
+                alt="gallery"
+                className="
+                  w-115 h-75
+                  object-cover rounded-2xl shadow-xl
+                "
+                draggable={false}
+              />
+            </div>
+          );
+        })}
+      </div>
+      {/*END GALLERY AREA */}
+
+      {/* Pagination */}
+      <div className="flex gap-2 mt-6">
         {slides.map((_, i) => (
-          <button
+          <span
             key={i}
-            aria-label={`Slide ${i + 1}`}
             onClick={() => setActive(i)}
             className={`
-              w-3 h-3 rounded-full transition
-              ${i === active ? "bg-white" : "bg-gray-400"}
-              `}
+              h-2 rounded-full cursor-pointer transition-all duration-300
+              ${i === active
+                ? "w-5 bg-blue-900"
+                : "w-2 bg-gray-400"}
+            `}
           />
         ))}
       </div>
 
-      <p className="max-w-xl text-center mt-6 text-sm italic opacity-70">
-        "{slides[active].desc}"
-      </p>
+      {/* Caption */}
+      {slides[active].desc && (
+        <p className="max-w-xl text-center mt-6 text-sm italic opacity-70">
+          "{slides[active].desc}"
+        </p>
+      )}
     </section>
   );
 }
