@@ -29,14 +29,18 @@ function Home() {
                     </div>
 
                     <div className="w-1/2 flex justify-end gap-6">
+
                         <div className="w-56 h-105 bg-neutral-900 rounded-2xl border border-neutral-700" />
                         <div className="w-56 h-105 bg-neutral-900 rounded-2xl border border-neutral-700 mt-14" />
+                        
                     </div>
-                </div>
 
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-lime-400 text-sm">
-                    <div className="w-5 h-8 border-2 border-lime-400 rounded-full mb-2" />
-                    <span>Scroll down</span>
+                </div>
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-green-400">
+                <div className="w-6 h-10 rounded-full border border-green-400 flex items-start justify-center">
+                 <div className="w-1 h-2 bg-green-400 mt-2 rounded-full animate-bounce" />
+                </div>
+                    <span className="text-sm">Scroll down</span>
                 </div>
             </section>
         </>
