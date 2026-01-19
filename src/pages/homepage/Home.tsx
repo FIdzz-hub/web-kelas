@@ -16,7 +16,7 @@ function Home() {
                     </p>
 
                     <div className="flex gap-4">
-                        <button className="px-6 py-2 rounded-full border border-white hover:bg-white text-white hover:text-black transition text-sm">
+                        <button className="px-6 py-2 rounded-full border border-white hover:bg-white text-white hover:text-black transition text-lg font-bold">
                             About Us
                         </button>
                         <button className="px-6 py-2 rounded-full border border-white hover:bg-white text-white hover:text-black transition">
