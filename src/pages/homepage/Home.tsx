@@ -5,7 +5,6 @@ function Home() {
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-125 h-125 rounded-full bg-linear-to-br from-lime-400 via-green-500 to-blue-600 blur-3xl opacity-70" />
 
                 <div className="relative z-10 max-w-xl">
-                    <p className="text-xs text-gray-400 mb-4">HITAM HITAM HITAM</p>
 
                     <h1 className="text-5xl font-bold leading-tight mb-6">
                         SISTEM INFORMASI <br /> 49–10
@@ -17,10 +16,10 @@ function Home() {
                     </p>
 
                     <div className="flex gap-4">
-                        <button className="px-6 py-2 rounded-full bg-white text-black text-sm font-medium">
+                        <button className="px-6 py-2 rounded-full border border-white hover:bg-white text-white hover:text-black transition text-sm">
                             About Us
                         </button>
-                        <button className="px-6 py-2 rounded-full border border-white text-sm">
+                        <button className="px-6 py-2 rounded-full border border-white hover:bg-white text-white hover:text-black transition">
                             Gallery
                         </button>
                     </div>
