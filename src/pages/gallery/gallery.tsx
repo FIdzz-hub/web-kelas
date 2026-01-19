@@ -60,24 +60,33 @@ function Gallery() {
             <div
               key={i}
               className={`
-                absolute transition-transform duration-500 ease-out
+                absolute transition-transform duration-500 ease-out will-change-transform *
                 ${offset === 0
-                  ? "translate-x-0 scale-100 z-10"
+                  ? "translate-x-0 z-10"
                   : offset < 0
-                    ? "-translate-x-115 scale-90 z-0"
-                    : "translate-x-115 scale-90 z-0"
+                    ? "-translate-x-115 z-0"
+                    : "translate-x-115 z-0"
                 }
               `}
             >
-              <img
-                src={slide.img}
-                alt="gallery"
-                className="
-                  w-115 h-75
-                  object-cover rounded-2xl shadow-xl
-                "
-                draggable={false}
-              />
+              <div
+                className={`
+                  transition-transform duration-500 ease-out
+                  ${offset === 0 ? "scale-100" : "scale-90"}
+              `}
+              >
+                <img
+                  src={slide.img}
+                  alt="gallery"
+                  className="
+                    w-115 h-75
+                    object-cover rounded-2xl shadow-xl
+                    will-change-transform
+                  "
+                  draggable={false}
+                  loading="lazy"
+                />
+              </div>
             </div>
           );
         })}
