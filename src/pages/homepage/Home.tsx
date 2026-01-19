@@ -48,3 +48,35 @@ function Home() {
 }
 
 export default Home;
+
+
+
+// { <div className="w-1/2 relative flex justify-center items-center">
+
+//   {/* GLOW BESAR */}
+//   <div className="absolute w-[520px] h-[520px] rounded-full
+//     bg-gradient-to-br from-lime-400 via-green-500 to-blue-600
+//     opacity-70 blur-[140px]" />
+
+//   {/* GLOW RING */}
+//   <div className="absolute w-[620px] h-[620px] rounded-full
+//     border border-green-400/30" />
+//   <div className="absolute w-[760px] h-[760px] rounded-full
+//     border border-green-400/10" />
+
+//   {/* PHONE BELAKANG */}
+//   <div
+//     className="absolute w-64 h-[460px] bg-neutral-900 rounded-[32px]
+//     border border-neutral-700
+//     shadow-[0_30px_80px_rgba(0,0,0,0.6)]
+//     -rotate-[6deg] -translate-x-24 z-10"
+//   />
+
+//   {/* PHONE DEPAN */}
+//   <div
+//     className="absolute w-64 h-[460px] bg-neutral-900 rounded-[32px]
+//     border border-neutral-700
+//     shadow-[0_60px_140px_rgba(0,0,0,0.9)]
+//     rotate-[4deg] translate-x-10 z-30"
+//   />
+// </div> */}
