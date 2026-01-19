@@ -1,32 +1,34 @@
-import bgKelas from "../../assets/images/jelek.jpeg";
-import fotoKanan1 from "../../assets/images/4910.png";
-import fotoKanan2 from "../../assets/images/telkom.png";
-
 function Home() {
     return (
         <>
-            <section id="home" className="relative w-full h-screen overflow-hidden">
-                <img src={bgKelas} alt="Backgroud Kelas" className="absolute inset-0 w-full h-225 object-cover object-center brightness-75" />
+            <section id="home" className="relative min-h-screen flex items-center px-10">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-125 h-125 rounded-full bg-linear-to-br from-lime-400 via-green-500 to-blue-600 blur-3xl opacity-70" />
 
-                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="relative z-10 max-w-xl">
+                    <p className="text-xs text-gray-400 mb-4">HITAM HITAM HITAM</p>
 
-                <div className="absolute top-6 right-10 z-20 flex gap-5">
-                    <img
-                        src={fotoKanan1}
-                        alt="image kelas"
-                        className="w-16 h-16 object-cover rounded-lg"
-                    />
-                <img
-                        src={fotoKanan2}
-                        alt="image kelas"
-                        className="w-16 h-16 object-cover rounded-lg"
-                    />
-                </div>
-                <div className="relative z-10 flex items-end h-full px-10 pb-20">
-                    <div className="max-w-xl text-white">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">SISTEM INFORMASI 49 - 10</h1>
-                        <p className="text-sm md:text-base leading-relaxed opacity-95">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sed ad numquam. Excepturi aut distinctio, iure est rerum et aspernatur magni sunt minima quod dicta impedit voluptatibus maiores, saepe dolores.</p>
+                    <h1 className="text-5xl font-bold leading-tight mb-6">
+                        SISTEM INFORMASI <br /> 49–10
+                    </h1>
+
+                    <p className="text-gray-400 text-sm mb-8">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                        amet sint. Velit officia consequat duis enim velit mollit.
+                    </p>
+
+                    <div className="flex gap-4">
+                        <button className="px-6 py-2 rounded-full bg-white text-black text-sm font-medium">
+                            About Us
+                        </button>
+                        <button className="px-6 py-2 rounded-full border border-white text-sm">
+                            Gallery
+                        </button>
                     </div>
+                </div>
+
+                <div className="relative z-10 ml-auto flex gap-6">
+                    <div className="w-52 h-96 bg-neutral-900 rounded-xl border border-neutral-700" />
+                    <div className="w-52 h-96 bg-neutral-900 rounded-xl border border-neutral-700 mt-10" />
                 </div>
             </section>
         </>

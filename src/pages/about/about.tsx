@@ -15,7 +15,6 @@ function About() {
 
     return (
         <section
-            id="about"
             className="min-h-screen flex flex-col items-center justify-center px-10"
         >
             {/* Title */}

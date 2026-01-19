@@ -1,59 +1,22 @@
-import { useState, useEffect } from "react";
+import logo from "../assets/icons/Logo.png";
 
 function Navbar() {
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setActive(true);
-      } else {
-        setActive(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, []);
-
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50">
-        <div className="flex items-center justify-between px-10 py-5 bg-transparent">
-          <ul className={`flex p-6 gap-12 text-2xl text-white font-semibold ${ active ? "top-0 opacity-100" : "-top-10 opacity-100" }`} >
+    <header className="w-full">
+      <nav className="mx-auto max-w-360 px-12 py-6 flex items-center">
+        <div>
+          <img src={logo} alt="logo"/>
+          </div>
 
-            <li className="relative group">
-              <a href="#home" className="cursor-pointer hover:text-gray-300 transition">
-                Home
-              </a>
-              <span className="absolute left-0 -bottom-1 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
-            </li>
-
-            <li className="relative group">
-              <a href="#about" className="cursor-pointer hover:text-gray-300 transition">
-                About Us
-              </a>
-              <span className="absolute left-0 -bottom-1 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
-            </li>
-
-            <li className="relative group">
-              <a href="#gallery" className="cursor-pointer hover:text-gray-300 transition">
-                Gallery
-              </a>
-              <span className="absolute left-0 -bottom-1 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
-            </li>
-
-            <li className="relative group">
-              <a href="#news" className="cursor-pointer hover:text-gray-300 transition">
-                News
-              </a>
-              <span className="absolute left-0 -bottom-1 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-300 ease-out"></span>
-            </li>
-          </ul>
-        </div>
+        <ul className="flex items-center px-14 gap-12 text-md font-bold text-gray-300">
+          <li className="hover:text-white cursor-pointer">Overview</li>
+          <li className="hover:text-white cursor-pointer">About Us</li>
+          <li className="hover:text-white cursor-pointer">Gallery</li>
+          <li className="hover:text-white cursor-pointer">News</li>
+        </ul>
       </nav>
+    </header>
     </>
   )
 }

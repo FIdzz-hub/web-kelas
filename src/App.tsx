@@ -1,4 +1,3 @@
-import About from "./pages/about/about";
 import Gallery from "./pages/gallery/gallery";
 import Home from "./pages/homepage/Home";
 
@@ -8,7 +7,6 @@ function App() {
     <>
     <div className="min-h-screen bg-black/50">
       <Home />
-      <About />
       <Gallery />
     </div>
     </>
