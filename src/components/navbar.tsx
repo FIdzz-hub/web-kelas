@@ -4,10 +4,12 @@ function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <nav className="mx-auto max-w-360 px-12 py-6 flex items-center">
-        <img src={logo} alt="logo" />
+        <div className="">
+          <img src={logo} alt="logo" />
+        </div>
 
-        <ul className="flex items-center px-14 gap-12 text-md font-bold">
-          
+        <ul className="flex items-center px-12 gap-12 text-xl font-extrabold">
+
           {[
             { label: "Overview", href: "#home" },
             { label: "About Us", href: "#about" },
@@ -23,7 +25,7 @@ function Navbar() {
               </a>
 
               <span className="absolute left-1/2 -bottom-3 -translate-x-1/2 
-                h-[2px] w-0 bg-lime-400 rounded-full 
+                h-0.5 w-0 bg-lime-400 rounded-full 
                 transition-all duration-300 group-hover:w-6" />
             </li>
           ))}
